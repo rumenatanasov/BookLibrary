@@ -1,0 +1,58 @@
+header{
+    background: #DDD;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-align: center;
+
+
+}
+header a{
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 3px;
+
+
+}
+header a:hover{
+    background: #AAA;
+}
+#loadingBox,#errorBox,#infoBox{
+    display: none;
+    background: #AAA;
+    width: 80%;;
+    margin: 10px auto;
+    text-align: center;
+
+}
+#loadingBox{
+    background: #7CB3E9;
+}
+#infoBox{
+    background: #393;
+}
+#errorBox{
+    background: #F50;
+    color:white;
+}
+main > section{
+    display: none;
+}
+table th, table td{
+    background: #DDD;
+    padding:5px 10px;
+    text-align: center;
+}
+table th{
+    display: inline-block;
+    text-align: center;
+    padding: 10px 10px;
+}
+footer{
+    background: #DDD;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 0.8em;
+    margin: 5px 10px;
+
+}

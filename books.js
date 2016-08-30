@@ -143,8 +143,8 @@ $(function () {
     $('#linkCreateBook').click(showCreateBookView);
     $('#linkLogout').click(logout);
 
-    $('#buttonLogin').click(login);
-    $('#buttonRegister').click(register);
+   $('#formLogin').submit(function (e) {event.preventDefault();login()});
+    $('#formRegister').submit(function (e) {event.preventDefault(); register()});
     
 
 

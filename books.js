@@ -127,6 +127,32 @@ function showListBooks() {
 function showCreateBookView() {
     showView('viewCreateBook');
 }
+/*function createBook() {
+    let createBookURL = kinveyBaseUrl + "appdata/" + kinveyAppId + "books/";
+    let authHeaders = {
+        "Authorization": "Kinvey" + sessionStorage.authToken
+    };
+    let newBookData = {
+        title: $('#bookTitle').val(),
+        author: $('#bookAuthor').val(),
+        description: $('#bookDescription')
+
+    };
+    $.ajax({
+        method:"POST",
+        url: createBookURL,
+        data:newBookData,
+        headers:authHeaders,
+        success: booksCreated,
+        error: showError
+    });
+    function booksCreated() {
+        showListBooks();
+        showInfo('Book created');
+
+    
+}
+*/
 
 
 function logout() {

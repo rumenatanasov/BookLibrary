@@ -107,16 +107,15 @@ function showListBooks() {
     function booksLoaded(books,status) {
         showInfo('Books loaded');
         $('#books').text('');
-        let booksTable = $("<table>").append($('<tr>')
-            .append($('<th>Title</th>')
-                .append($('<th>Author</th>')
-                    .append($('<th>Description</th>')))));
+        let booksTable = ($("<table class='table'>").append($('<tr>')
+            .append('<td>Title</td><td>Author</td><td>Description</td>')));
+        
 
         for(let book of books){
             booksTable.append($('<tr>')
-                .append($('<td></td>').text(book.title)
-                    .append($('<td></td>').text(book.author)
-                        .append($('<td></td>').text(book.description)))));
+                .append($('<td>').text(book.title))
+                    .append($('<td>').text(book.author))
+                        .append($('<td>').text(book.description)));
         }
         $('#books').append(booksTable);
     };
@@ -168,7 +167,9 @@ $(function () {
 
    $('#formLogin').submit(function (e) {event.preventDefault();login()});
     $('#formRegister').submit(function (e) {event.preventDefault(); register()});
-    
+    $('#formCreateBook').submit(function (e) {event.preventDefault(); createBook();
+        
+    })
 
 
 

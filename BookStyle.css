@@ -14,7 +14,7 @@ header a{
 
 }
 header a:hover{
-    background: #AAA;
+    background: #DDDDDD;
 }
 #loadingBox,#errorBox,#infoBox{
     display: none;

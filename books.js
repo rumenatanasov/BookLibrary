@@ -2,6 +2,7 @@ const kinveyAppId = "kid_rJ1vX9kq";
 const kinveyAppSecret = "0fddf7e13a36457c86838a141acfde5c";
 const kinveyBaseUrl = "https://baas.kinvey.com/";
 
+
 function showView(viewID) {
     $('main>section').hide();
     $('#' + viewID).show();
@@ -32,6 +33,7 @@ function showRegisterView() {
 
 function showHomeView() {
     showView('viewHome');
+   
 }
 function login() {
     let authBase64 = btoa(kinveyAppId + ":" + kinveyAppSecret);
@@ -107,9 +109,17 @@ function showListBooks() {
     function booksLoaded(books,status) {
         showInfo('Books loaded');
         $('#books').text('');
-        let booksTable = ($("<table class='table'>").append($('<tr>')
+
+
+
+        let booksTable =$('<div class="panel panel-default">' +
+            '<div class="panel panel-heading"></div></div>')
+            .append
+
+            ($("<table class='table table-bordered'>").append($('<tr>')
+
             .append('<td>Title</td><td>Author</td><td>Description</td>')));
-        
+
 
         for(let book of books){
             booksTable.append($('<tr>')

@@ -111,26 +111,29 @@ function showListBooks() {
         $('#books').text('');
 
 
-
         let booksTable =$('<div class="panel panel-default">' +
             '<div class="panel panel-heading"></div></div>')
             .append
 
-            ($("<table class='table table-bordered'>").append($('<tr>')
+            ($("<table class='table table-bordered'>").append($('<thead>')
+                .append( $('<tr>')
+                    .append('<td>Title</td><td>Author</td><td>Description</td>'))).append($('<tbody>')));
 
-            .append('<td>Title</td><td>Author</td><td>Description</td>')));
-
+        $('#books').append(booksTable);
 
         for(let book of books){
-            booksTable.append($('<tr>')
+            $('.table-bordered tbody').append($('<tr>')
                 .append($('<td>').text(book.title))
-                    .append($('<td>').text(book.author))
-                        .append($('<td>').text(book.description)));
+                .append($('<td>').text(book.author))
+                .append($('<td>').text(book.description)));
         }
-        $('#books').append(booksTable);
+
     };
 
-}
+
+
+
+    }
 
 
 function showCreateBookView() {

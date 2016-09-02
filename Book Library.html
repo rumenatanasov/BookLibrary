@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Book Library</title>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="BookStyle.css"/>
     <script src="jquery-3.1.0.min.js"></script>
     <script src="books.js"></script>
     <script src="styles/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css"/>
+
 
 
 
@@ -15,12 +16,17 @@
 </head>
 <body>
         <header>
-            <a href="#" id="linkHome">Home</a>
-            <a href="#" id="linkLogin">Login</a>
-            <a href="#" id="linkRegister">Register</a>
-            <a href="#" id="linkListBooks">List Books</a>
-            <a href="#" id="linkCreateBook">Create Book</a>
-            <a href="#" id="linkLogout">Logout</a>
+            <div id="list1">
+                <ul>
+            <li><a href="#"  id="linkHome">Home</a></li>
+            <li><a href="#" id="linkLogin">Login</a></li>
+            <li><a href="#" id="linkRegister">Register</a></li>
+            <li><a href="#" id="linkListBooks">List Books</a></li>
+            <li><a href="#" id="linkCreateBook">Create Book</a></li>
+            <li><a href="#" id="linkLogout">Logout</a></li>
+
+                </ul>
+            </div>
         </header>
         <main>
             <section id="loadingBox">Loading...</section>
@@ -28,7 +34,7 @@
             <section id="errorBox" onclick="$(this).hide()">Error!</section>
             <section id="viewHome">
                 <h1>Welcome</h1>
-                <div>Welcome to my book library!</div>
+                <div>Welcome to Rumen's library!</div>
             </section>
             <section id="viewLogin">
 
@@ -49,13 +55,14 @@
                 <div><input type="text" id="registerUser" required /></div>
                 <div>Password:</div>
                 <div><input type="password" id="registerPass" required /></div>
-                <div><input type="submit"  value="Register" /></div>
+                <div><input type="submit"  value="Register"/></div>
                 </form>
             </section>
             <section id="viewListBooks">
                 <h1>Books listing...</h1>
                 <div id="books">No books</div>
             </section>
+
 
             <section id="viewCreateBook">
                 <h1>Create book</h1>
@@ -70,6 +77,7 @@
                 </form>
             </section>
         </main>
+
         <footer>
             &copy My Book Library
         </footer>
